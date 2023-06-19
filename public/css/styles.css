@@ -1,0 +1,140 @@
+.login-container {
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-container .form-control {
+    margin-bottom: 20px;
+}
+
+.login-container .btn {
+    width: 100%;
+}
+
+.addPet, .updatePet, .home{
+    padding: 50px;
+}
+
+.register-container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register-container form {
+    margin-bottom: 20px;
+}
+
+.register-container .form-group label {
+    font-weight: bold;
+}
+
+.register-container .form-control {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.register-container .btn-primary {
+    width: 100%;
+}
+
+.sair{
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    margin-top: 5px;
+    width: 250px;
+}
+
+.sair::hover, .side::hover{
+    background-color: #0056b3;
+}
+
+.btnregister, .updatebtn{
+    margin-top: 10px;
+}
+
+.update-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+}
+
+.update-form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.update-form-container form {
+    margin-bottom: 20px;
+}
+
+.update-form-container .form-group label {
+    font-weight: bold;
+}
+
+.update-form-container .form-control {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.update-form-container .btn-primary {
+    width: 100%;
+}
+
+.return{
+    margin-top: 30px;
+    border-radius: 20px;
+    margin-left: 25px;
+    position: absolute;
+}
+
+.credenciais{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.invalid{
+    width: 350px;
+    margin-top: 10px;
+}
+
+@media screen and (min-with:786px) {
+    .login-container {
+        max-width: 400px;
+    }
+}

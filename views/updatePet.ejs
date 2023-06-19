@@ -1,0 +1,34 @@
+<%- include("partials/header"); -%>
+
+<%- include("partials/sidebar"); -%>
+
+<div class="container updatePet">
+    <h1>Atualizar Informações do Pet</h1>
+    <form>
+        <div class="mb-3">
+            <label for="nomePet" class="form-label">Nome do Pet</label>
+            <input type="text" class="form-control" id="nomePet" placeholder="Digite o nome do pet" value="Buddy">
+        </div>
+        <div class="mb-3">
+            <label for="generoPet" class="form-label">Gênero do Pet</label>
+            <select class="form-control" id="generoPet">
+                <option value="">Selecione o gênero</option>
+                <option value="Macho" selected>Macho</option>
+                <option value="Fêmea">Fêmea</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="tutor" class="form-label">Tutor</label>
+            <input type="text" class="form-control" id="tutor" placeholder="Digite o nome do tutor" value="John Doe">
+        </div>
+        <div class="mb-3">
+            <label for="altura" class="form-label">Altura</label>
+            <input type="number" class="form-control" id="altura" placeholder="Digite a altura do pet" value="30">
+        </div>
+        <button type="submit" class="btn btn-primary">Atualizar Pet</button>
+    </form>
+</div>
+
+
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,27 @@
+<%- include("partials/header"); -%>
+<%- include("partials/sidebar"); -%>
+
+<div class="container addPet">
+        <h1>Form Example</h1>
+        <form action="/addPet" method="post">
+            <div class="mb-3">
+                <label for="nomePet" class="form-label">Nome do Pet</label>
+                <input type="text" name="nome_pet" class="form-control" id="nomePet" placeholder="Digite o nome do pet">
+            </div>
+            <div class="mb-3">
+                <label for="generoPet" class="form-label">Gênero do Pet</label>
+                <input type="text"  name="genero_pet" class="form-control" id="generpet" placeholder="Macho ou fêmea?">
+            </div>
+            <div class="mb-3">
+                <label for="tutor" class="form-label">Tutor</label>
+                <input type="number" name="tutor" class="form-control" id="tutor" placeholder="Digite o id do Pet">
+            </div>
+            <div class="mb-3">
+                <label for="altura" class="form-label">Altura</label>
+                <input type="number" name="altura" class="form-control" id="altura" placeholder="Digite a altura do pet em cm">
+            </div>
+            <button type="submit" class="btn btn-primary">Adicionar Pet</button>
+        </form>
+    </div>
+
+    <%- include("partials/footer"); -%>
