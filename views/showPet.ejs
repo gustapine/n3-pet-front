@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+<%- include("partials/sidebar"); -%>
+
+<div class="container addPet">
+  <h1 class="h1ShowPet">Segue o Pet 🐶</h1>
+  <form action="/updatePet" method="post">
+    <% data.forEach(function(pet) { %>
+      <div class="pet-info">
+        <label for="nome_<%= pet.id %>">Name:</label>
+        <input type="text" id="nome_<%= pet.id %>" name="nome_<%= pet.id %>" value="<%= pet.nome %>">
+
+        <label for="genero_<%= pet.id %>">Gender:</label>
+        <input type="text" id="genero_<%= pet.id %>" name="genero_<%= pet.id %>" value="<%= pet.genero %>">
+
+        <label for="altura_<%= pet.id %>">Height:</label>
+        <input type="text" id="altura_<%= pet.id %>" name="altura_<%= pet.id %>" value="<%= pet.altura %>">
+      </div>
+      <hr>
+    <% }); %>
+
+    <!--<button type="submit" class="btn btn-primary">Atualizar</button>-->
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>

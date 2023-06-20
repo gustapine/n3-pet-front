@@ -1,8 +1,13 @@
 <%- include("partials/header"); -%>
 <%- include("partials/sidebar"); -%>
 
-<div class="container">
-    
-</div>
 
-<%- include("partials/footer"); -%>
+<% newArticles.forEach(function(entry) { %>
+    <p class="text">
+        <%= entry.content.substring(0, 100) + "..."%>
+        <span class="overflow" data-state="visible" aria-hidden="true"></span>
+    </p>
+    <a href="/allPosts/<%=entry.title%>" target="_blank" rel="noopener noreferrer" ><button class="toggle" data-state="more" name="buttonClicked" value=<%= entry.title %>>Leia Mais</button></a>
+    <% }); %>
+
+    <%- include("partials/footer"); -%>

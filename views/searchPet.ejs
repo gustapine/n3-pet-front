@@ -1,0 +1,15 @@
+<%- include("partials/header"); -%>
+
+    <%- include("partials/sidebar"); -%>
+        <div class="container addPet">
+            <h1>Pesquisar Pets por altura</h1>
+            <form action="/allPets"  method="post" class="formHeight">
+                <div class="mb-3">
+                    <label for="searchAltura" class="form-label">Procurar por altura</label>
+                    <input type="text" name="searchAltura" class="form-control" id="searchAltura" placeholder="Pequena, media ou alta">
+                </div>
+                <button type="submit" class="btn btn-primary">Pesquisar</button>
+            </form>
+        </div>
+
+ <%- include("partials/footer"); -%>
