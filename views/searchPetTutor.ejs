@@ -1,0 +1,14 @@
+<%- include("partials/header"); -%>
+<%- include("partials/sidebar"); -%>
+
+<div class="container addPet">
+    <h1>Pesquisar Pets por Tutor</h1>
+    <form action="/searchByTutor" method="post">
+        <div class="mb-3">
+            <label for="searchTutor" class="form-label">Procurar por tutor</label>
+            <input type="text" name="searchTutor" class="form-control" id="searchTutor" placeholder="Coloque o nome do tutor">
+        </div>
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
+    </form>
+</div>
+<%- include("partials/footer"); -%>
