@@ -68,7 +68,7 @@ app.post('/register', function (req, res) {
         })
         .catch(error => {
             console.error(error);
-            res.render("error");
+            res.render("valorinvalido");
         });
 });
 
@@ -92,7 +92,7 @@ app.post("/addPet", function (req, res) {
         })
         .catch(error => {
             console.error(error);
-            res.render("error");
+            res.render("valorinvalido");
         });
 
 });
@@ -169,7 +169,7 @@ app.post("/allPets", function (req, res) {
         })
         .catch(error => {
             console.error(error);
-            res.render("error");
+            res.render("valorinvalido");
         });
 })
 
@@ -195,7 +195,7 @@ app.post('/searchByTutor', (req, res) => {
     })
     .catch(error => {
       console.error(error);
-      res.render("error");
+      res.render("valorinvalido");
     });
 });
 
