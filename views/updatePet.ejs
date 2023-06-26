@@ -4,26 +4,27 @@
 
 <div class="container updatePet">
     <h1>Atualizar Informações do Pet</h1>
-    <form>
+    <form method="post" action="/updatePet">
         <div class="mb-3">
             <label for="nomePet" class="form-label">Nome do Pet</label>
-            <input type="text" class="form-control" id="nomePet" placeholder="Digite o nome do pet" value="Buddy">
+            <input type="text" name="cod_pet" class="form-control" id="idPet" placeholder="Digite o id do pet" >
+        </div>
+        <div class="mb-3">
+            <label for="nomePet" class="form-label">Nome do Pet</label>
+            <input type="text"  name="nome_pet" class="form-control" id="nomePet" placeholder="Digite o nome do pet">
         </div>
         <div class="mb-3">
             <label for="generoPet" class="form-label">Gênero do Pet</label>
-            <select class="form-control" id="generoPet">
-                <option value="">Selecione o gênero</option>
-                <option value="Macho" selected>Macho</option>
-                <option value="Fêmea">Fêmea</option>
+            <input type="text"  name="genero_pet" class="form-control" id="nomePet" placeholder="Digite o genero do pet">
             </select>
         </div>
         <div class="mb-3">
             <label for="tutor" class="form-label">Tutor</label>
-            <input type="text" class="form-control" id="tutor" placeholder="Digite o nome do tutor" value="John Doe">
+            <input type="text"  name="tutor" class="form-control" id="tutor" placeholder="Digite o nome do tutor" >
         </div>
         <div class="mb-3">
             <label for="altura" class="form-label">Altura</label>
-            <input type="number" class="form-control" id="altura" placeholder="Digite a altura do pet" value="30">
+            <input type="number" name="altura" class="form-control" id="altura" placeholder="Digite a altura do pet em cm">
         </div>
         <button type="submit" class="btn btn-primary">Atualizar Pet</button>
     </form>

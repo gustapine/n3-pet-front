@@ -19,6 +19,9 @@ app.get("/", function (req, res) {
     res.render("home");
 });
 
+
+
+// processo de login
 app.get('/login', function (req, res) {
     res.render('login');
 });
@@ -69,6 +72,7 @@ app.post('/register', function (req, res) {
         });
 });
 
+
 app.get("/addPet", function (req, res) {
     res.render("addPet");
 });
@@ -93,9 +97,56 @@ app.post("/addPet", function (req, res) {
 
 });
 
+
+
 app.get("/updatePet", function (req, res) {
     res.render("updatePet");
 });
+
+app.post('/updatePet', function (req, res) {
+    let idPet = req.body.cod_pet
+
+    let info = {
+        cod_pet: req.body.cod_pet,
+        nome_pet: req.body.nome_pet,
+        genero_pet: req.body.genero_pet,
+        tutor:  req.body.tutor,
+        altura:  req.body.altura
+    }
+
+    axios.put(`http://localhost:5000/api/pet/update/${idPet}`, info)
+        .then(response => {
+            console.log(response.data);
+            res.redirect('/');
+        })
+        .catch(error => {
+            console.error(error);
+            res.render("error");
+        });
+});
+
+app.get("/deletePet", function (req, res) {
+    res.render("deletePet");
+});
+
+app.post('/deletePet', function (req, res) {
+    let idPet = req.body.cod_pet
+
+    let info = {
+        cod_pet: req.body.cod_pet
+    }
+
+    axios.delete(`http://localhost:5000/api/pet/${idPet}`, info)
+        .then(response => {
+            console.log(response.data);
+            res.redirect('/');
+        })
+        .catch(error => {
+            console.error(error);
+            res.render("error");
+        });
+});
+
 
 app.get("/allPets", function (req, res) {
     res.render("searchPet");
@@ -152,6 +203,8 @@ app.post('/searchByTutor', (req, res) => {
 app.get('/showPet', (req, res) =>{
     res.render("showPet");
 })
+
+
 
 app.listen(7000, function () {
     console.log("Server started on port 7000");
