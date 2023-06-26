@@ -1,0 +1,18 @@
+<%- include("partials/header"); -%>
+
+<%- include("partials/sidebar"); -%>
+
+<div class="container updatePet">
+    <h1>Deletar Pet</h1>
+    <form method="post" action="/deletePet">
+        <div class="mb-3">
+            <label for="nomePet" class="form-label">Nome do Pet</label>
+            <input type="text" name="cod_pet" class="form-control" id="idPet" placeholder="Digite o id do pet" >
+        </div>
+        <button type="submit" class="btn btn-primary">Deletar Pet</button>
+    </form>
+</div>
+
+
+
+<%- include("partials/footer"); -%>
